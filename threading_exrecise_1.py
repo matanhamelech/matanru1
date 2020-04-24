@@ -1,3 +1,6 @@
+"""
+this module writes to a file a word using 2 threads
+"""
 from pathlib import Path
 from threading import Event, Thread
 
@@ -8,6 +11,9 @@ printed_even = Event()
 
 
 def write_even():
+    """
+    write odd placed letters from STRING
+    """
     for char in STRING[1::2]:
         printed_odd.wait()
         print(char)
@@ -16,6 +22,9 @@ def write_even():
 
 
 def main():
+    """
+    write even and odd letters from String using two threads
+    """
     even_printer = Thread(target=write_even)
     even_printer.start()
 
