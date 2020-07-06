@@ -17,11 +17,10 @@ class creditcard:
             self.ask = int(input())
             if self.ask == 1:
                 self.spend_money()
-            if self.ask==2:
+            if self.ask == 2:
                 self.add_money()
-            self.time+=1
+            self.time += 1
         print(f"you added {self.sum} money")
-
 
     def spend_money(self):
         self.x: int = int(input("how much money do you want to spend? "))
@@ -34,4 +33,6 @@ class creditcard:
         self.money += self.y
         print(f"added {self.y} shekels")
         self.sum += self.y
-clss=creditcard()
+
+
+clss = creditcard()

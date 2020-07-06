@@ -4,8 +4,6 @@ app = Celery('tasks', broker='amqp://localhost')
 
 @app.task
 def watchdog():
-
-
 	dirlist = os.listdir("/home/user/matan/exercisewatchdog/")
 	i=0
 	print(dirlist)
